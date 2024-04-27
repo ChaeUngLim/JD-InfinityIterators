@@ -1,4 +1,4 @@
-package Account;
+package com.infinityiterators.Account;
 
 public class UserDTO {
 

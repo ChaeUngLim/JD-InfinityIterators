@@ -1,45 +1,40 @@
 package com.infinityiterators.Account;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 public class UserDTO {
 
-    private int pk;
-    private String id;
+    private int PK;
+    private String ID;
     private String pwd;
     private String name;
-    private LocalDate birthDate;
-    private Boolean adminStatus;
-    private LocalDateTime registerDate;
+    private String birthDate;
+    private String adminStatus;
+    private String registerDate;
 
     public UserDTO() {
     }
-
-    public UserDTO(int pk, String id, String pwd, String name, LocalDate birthDate, Boolean adminStatus, LocalDateTime registerDate) {
-        this.pk = pk;
-        this.id = id;
+    public UserDTO(int PK, String ID, String pwd, String name, String birthDate, String registerDate) {
+        this.PK = PK;
+        this.ID = ID;
         this.pwd = pwd;
         this.name = name;
         this.birthDate = birthDate;
-        this.adminStatus = adminStatus;
         this.registerDate = registerDate;
     }
 
-    public int getPk() {
-        return pk;
+    public int getPK() {
+        return PK;
     }
 
-    public void setPk(int pk) {
-        this.pk = pk;
+    public void setPK(int PK) {
+        this.PK = PK;
     }
 
-    public String getId() {
-        return id;
+    public String getID() {
+        return ID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getPwd() {
@@ -58,40 +53,31 @@ public class UserDTO {
         this.name = name;
     }
 
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
-    public Boolean getAdminStatus() {
-        return adminStatus;
-    }
-
-    public void setAdminStatus(Boolean adminStatus) {
-        this.adminStatus = adminStatus;
-    }
-
-    public LocalDateTime getRegisterDate() {
+    public String getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(LocalDateTime registerDate) {
+    public void setRegisterDate(String registerDate) {
         this.registerDate = registerDate;
     }
 
     @Override
     public String toString() {
         return "UserDTO{" +
-                "pk=" + pk +
-                ", id='" + id + '\'' +
+                "PK=" + PK +
+                ", ID='" + ID + '\'' +
                 ", pwd='" + pwd + '\'' +
                 ", name='" + name + '\'' +
-                ", birthDate=" + birthDate +
-                ", adminStatus=" + adminStatus +
-                ", registerDate=" + registerDate +
+                ", birthDate='" + birthDate + '\'' +
+                ", registerDate='" + registerDate + '\'' +
                 '}';
     }
 }

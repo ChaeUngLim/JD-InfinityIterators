@@ -1,6 +1,7 @@
 package view.interaction;
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class Interaction {
     public static int getInt(String message) {
@@ -30,5 +31,15 @@ public class Interaction {
         scanner.nextLine();
 
         return input;
+    }
+
+    public static String getHiddenInput(String message) {
+        System.out.print(message);
+
+        Console console = System.console();
+        if(console == null) throw new RuntimeException("Console not available");
+
+        char[] password = console.readPassword(message);
+        return new String(password);
     }
 }

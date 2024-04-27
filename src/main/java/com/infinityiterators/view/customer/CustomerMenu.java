@@ -1,6 +1,6 @@
-package view.customer;
+package com.infinityiterators.view.customer;
 
-import view.*;
+import com.infinityiterators.view.*;
 
 public class CustomerMenu implements IMenuStrategy {
     @Override

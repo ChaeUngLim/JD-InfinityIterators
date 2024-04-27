@@ -1,8 +1,6 @@
-package view;
+package com.infinityiterators.view;
 
-import view.interaction.Interaction;
-
-import java.util.Scanner;
+import com.infinityiterators.view.interaction.Interaction;
 
 public class LoginMenu {
     private MenuContext menuContext;

@@ -1,10 +1,12 @@
-import view.LoginMenu;
-import view.interaction.Interaction;
+package com.infinityiterators;
+
+import com.infinityiterators.view.LoginMenu;
+import com.infinityiterators.view.interaction.Interaction;
 
 public class EntryPoint {
     private LoginMenu loginMenu;
     public static void main(String[] args) {
-//        EntryPoint entryPoint = new EntryPoint();
+//        com.infinityiterators.EntryPoint entryPoint = new com.infinityiterators.EntryPoint();
 //        entryPoint.loginMenu = new LoginMenu();
 //        entryPoint.loginMenu.showMenu();
 

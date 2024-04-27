@@ -1,4 +1,4 @@
-package view;
+package com.infinityiterators.view;
 
 public class MenuContext {
     private IMenuStrategy strategy;

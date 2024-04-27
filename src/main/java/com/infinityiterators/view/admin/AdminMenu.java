@@ -1,6 +1,6 @@
-package view.admin;
+package com.infinityiterators.view.admin;
 
-import view.*;
+import com.infinityiterators.view.*;
 
 public class AdminMenu implements IMenuStrategy {
     public void showMenu() {

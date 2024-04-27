@@ -1,4 +1,4 @@
-package view.interaction;
+package com.infinityiterators.view.interaction;
 
 import java.io.*;
 import java.util.*;

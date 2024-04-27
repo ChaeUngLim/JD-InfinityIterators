@@ -34,8 +34,6 @@ public class Interaction {
     }
 
     public static String getHiddenInput(String message) {
-        System.out.print(message);
-
         Console console = System.console();
         if(console == null) throw new RuntimeException("Console not available");
 

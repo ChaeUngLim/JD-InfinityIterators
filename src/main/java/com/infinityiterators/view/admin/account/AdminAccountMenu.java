@@ -6,6 +6,7 @@ import com.infinityiterators.view.interaction.*;
 public class AdminAccountMenu implements ISubMenuEntryPoint {
     @Override
     public void showEntryPointMenu() {
+        Interaction.clearScreen();
         MenuManager.displayMenuHeader("관리자 계정 관리 메뉴");
 
         // TODO.회원 목록 출력

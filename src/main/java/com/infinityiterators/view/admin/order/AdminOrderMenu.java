@@ -6,6 +6,7 @@ import com.infinityiterators.view.interaction.*;
 public class AdminOrderMenu implements ISubMenuEntryPoint {
     @Override
     public void showEntryPointMenu() {
+        Interaction.clearScreen();
         // 주문 관리 메뉴
         // 기본적으로 메뉴 진입 시 주문 목록을 보여준다.
         // 주문 목록을 보여주고, 주문 상세 정보를 보여주는 기능을 제공한다. -> 주문 상세 정보 페이지에서 주문 출고 여부(boolean flag)를 변경할 수 있다.

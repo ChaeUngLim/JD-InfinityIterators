@@ -2,11 +2,10 @@ package com.infinityiterators.view.customer;
 
 import com.infinityiterators.view.*;
 
-import com.infinityiterators.view.admin.account.*;
-import com.infinityiterators.view.admin.order.*;
-import com.infinityiterators.view.admin.product.*;
 
-import com.infinityiterators.view.customer.account.CustomerAccountMenu;
+import com.infinityiterators.view.customer.account.*;
+import com.infinityiterators.view.customer.order.CustomerOrderMenu;
+import com.infinityiterators.view.customer.product.CustomerProductMenu;
 import com.infinityiterators.view.interaction.*;
 
 public class CustomerMenu implements IMenuStrategyByType {
@@ -27,12 +26,12 @@ public class CustomerMenu implements IMenuStrategyByType {
                 case 2:
                     // 상품 관리
                     Interaction.displayMessage("주문 내역 조회 메뉴로 이동합니다.", DisplayType.SYSTEM, true);
-                    new AdminProductMenu().showEntryPointMenu();
+                    new CustomerProductMenu().showEntryPointMenu();
                     break;
                 case 3:
                     // 주문 관리
                     Interaction.displayMessage("회원 정보 수정 메뉴로 이동합니다.", DisplayType.SYSTEM, true);
-                    new AdminOrderMenu().showEntryPointMenu();
+                    new CustomerOrderMenu().showEntryPointMenu();
                     break;
                 case 4:
                     Interaction.displayMessage("로그아웃합니다.", DisplayType.SYSTEM, true);

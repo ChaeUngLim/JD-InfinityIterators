@@ -34,8 +34,8 @@ public class AdminMenu implements IMenuStrategyByType {
                 new AdminOrderMenu().showEntryPointMenu();
                 break;
             case 4:
-                // 로그아웃
                 Interaction.displayMessage("로그아웃합니다.", DisplayType.SYSTEM, true);
+                // TODO. 로그아웃 처리
                 break;
             default:
                 Interaction.displayMessage("잘못된 입력입니다.", DisplayType.ERROR, true);

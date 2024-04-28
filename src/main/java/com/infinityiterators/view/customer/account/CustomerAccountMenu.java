@@ -40,7 +40,7 @@ public class CustomerAccountMenu implements ISubMenuEntryPoint {
                 // TODO. 회원 탈퇴 기능 구현
             case 4:
                 Interaction.displayMessage("뒤로 가기", DisplayType.SYSTEM, true);
-                break;
+                return;
             default:
                 Interaction.displayMessage("잘못된 입력입니다.", DisplayType.ERROR, true);
                 break;

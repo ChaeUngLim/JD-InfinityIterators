@@ -6,6 +6,8 @@ import com.infinityiterators.view.interaction.*;
 public class AdminProductMenu implements ISubMenuEntryPoint {
     @Override
     public void showEntryPointMenu() {
+        Interaction.clearScreen();
+
         MenuManager.displayMenuHeader("관리자 상품 관리 메뉴");
         MenuManager.displaySelectionMenu("등록된 상품 목록 조회", "새 상품 등록", "상품 정보 수정", "등록된 상품 삭제", "뒤로 가기");
 

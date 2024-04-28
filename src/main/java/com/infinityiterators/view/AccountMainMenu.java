@@ -14,6 +14,8 @@ public class AccountMainMenu {
 
     public void showMenu() {
         while (true) {
+            Interaction.clearScreen();
+
             MenuManager.displayMenuHeader("로그인/회원가입");
             MenuManager.displaySelectionMenu("로그인", "회원가입", "종료");
 
@@ -38,6 +40,8 @@ public class AccountMainMenu {
     }
 
     private void loginMenu() {  // 탈출 시퀸스 필요
+        Interaction.clearScreen();
+
         MenuManager.displayMenuHeader("로그인");
 
         String id = Interaction.getString("아이디");
@@ -56,6 +60,7 @@ public class AccountMainMenu {
     }
 
     private void registerMenu() {
+        Interaction.clearScreen();
         MenuManager.displayMenuHeader("회원가입");
 
         String id = Interaction.getString("아이디를 입력해 주세요"); // 중복 체크 필요

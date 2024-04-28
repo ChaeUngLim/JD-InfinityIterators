@@ -11,6 +11,8 @@ public class Interaction {
         int input = scanner.nextInt();
         scanner.nextLine();
 
+        if(input < 0) throw new RuntimeException("음수는 입력할 수 없습니다.");
+
         return input;
     }
 
@@ -20,6 +22,7 @@ public class Interaction {
         displayMessage(message + ": ", DisplayType.NORMAL, false);
         String input = scanner.nextLine();
 
+        if(input.isBlank()) throw new RuntimeException("입력값이 없습니다.");
         return input;
     }
 
@@ -30,6 +33,7 @@ public class Interaction {
         char input = scanner.next().charAt(0);
         scanner.nextLine();
 
+        if(input == ' ') throw new RuntimeException("입력값이 없습니다.");
         return input;
     }
 
@@ -39,6 +43,9 @@ public class Interaction {
 
         displayMessage(message + ": ", DisplayType.NORMAL, false);
         char[] password = console.readPassword();
+
+        if(password.length == 0) throw new RuntimeException("입력값이 없습니다.");
+
         return new String(password);
     }
 

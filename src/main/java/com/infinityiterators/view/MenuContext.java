@@ -1,9 +1,9 @@
 package com.infinityiterators.view;
 
 public class MenuContext {
-    private IMenuStrategy strategy;
+    private IMenuStrategyByType strategy;
 
-    public void setStrategy(IMenuStrategy strategy) {
+    public void setStrategy(IMenuStrategyByType strategy) {
         this.strategy = strategy;
     }
 

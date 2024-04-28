@@ -4,6 +4,11 @@ import java.io.*;
 import java.util.*;
 
 public class Interaction {
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
+
     public static int getInt(String message) {
         Scanner scanner = new Scanner(System.in);
 

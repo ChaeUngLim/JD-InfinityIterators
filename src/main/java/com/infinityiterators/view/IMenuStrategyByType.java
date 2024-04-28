@@ -1,5 +1,6 @@
 package com.infinityiterators.view;
 
-public interface IMenuStrategy {
+
+public interface IMenuStrategyByType {
     void showMenu();
 }

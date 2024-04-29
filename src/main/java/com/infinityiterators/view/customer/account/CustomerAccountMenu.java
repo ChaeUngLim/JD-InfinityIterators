@@ -25,19 +25,19 @@ public class CustomerAccountMenu implements ISubMenuEntryPoint {
         MenuManager.displaySelectionMenu("아이디 수정", "비밀번호 수정", "회원 탈퇴", "뒤로 가기");
         int selection = Interaction.getInt("메뉴를 선택해주세요");
 
-        switch(selection) {
+        switch (selection) {
             case 1:
                 Interaction.displayMessage("현재는 지원되지 않는 기능입니다.", DisplayType.ERROR, true);
                 break;
-                // TODO. 아이디 수정 기능 구현
+            // TODO. 아이디 수정 기능 구현
             case 2:
                 Interaction.displayMessage("현재는 지원되지 않는 기능입니다.", DisplayType.ERROR, true);
                 break;
-                // TODO. 비밀번호 수정 기능 구현
+            // TODO. 비밀번호 수정 기능 구현
             case 3:
                 Interaction.displayMessage("현재는 지원되지 않는 기능입니다.", DisplayType.ERROR, true);
                 break;
-                // TODO. 회원 탈퇴 기능 구현
+            // TODO. 회원 탈퇴 기능 구현
             case 4:
                 Interaction.displayMessage("뒤로 가기", DisplayType.SYSTEM, true);
                 return; // TODO. 메인 메뉴로 돌아가기

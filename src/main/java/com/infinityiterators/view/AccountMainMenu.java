@@ -15,6 +15,15 @@ public class AccountMainMenu {
     public void showMenu() {
         while (true) {
             Interaction.clearScreen();
+            String header =
+                    "\n\n\t██╗   ██╗███████╗███████╗\n" +
+                        "\t██║   ██║██╔════╝██╔════╝\n" +
+                        "\t██║   ██║███████╗███████╗\n" +
+                        "\t╚██╗ ██╔╝╚════██║╚════██║\n" +
+                        "\t ╚████╔╝ ███████║███████║\n" +
+                        "\t  ╚═══╝  ╚══════╝╚══════╝\n";
+
+            Interaction.displayMessage(header, DisplayType.SYSTEM, true);
 
             MenuManager.displayMenuHeader("로그인/회원가입");
             MenuManager.displaySelectionMenu("로그인", "회원가입", "종료");

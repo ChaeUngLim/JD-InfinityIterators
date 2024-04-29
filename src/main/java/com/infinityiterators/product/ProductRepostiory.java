@@ -4,15 +4,38 @@ import java.util.ArrayList;
 
 public class ProductRepostiory {
 
-    ArrayList<ProductDto> productDTOArrayList(){return null;}
+    private ArrayList<ProductDto> productDTOArrayList;
 
-    public void addProduct(ProductDto dto){}
+    public ProductRepostiory(){
+        this.productDTOArrayList = new ArrayList<>();
+    }
+
+    public void addProduct(ProductDto dto){
+        productDTOArrayList.add(dto);
+    }
 
     public ProductDto findProductByName(String name){
+        for (ProductDto product : productDTOArrayList) {
+            if (product.getName().equals(name)){
+                return product;
+            }
+        }
         return null;
     }
 
-    public void updateProduct(int index, ProductDto dto){}
+    public void updateProduct(int index, ProductDto dto){
+        if (index >= 0 && index < productDTOArrayList.size()) {
+            productDTOArrayList.set(index, dto);
+        }
+    }
 
-    public void removeProduct(){}
+    public void removeProduct(String name){
+        for (int i = 0; i < productDTOArrayList.size(); i++){
+            ProductDto product = productDTOArrayList.get(i);
+            if (product.getName().equals(name)){
+                productDTOArrayList.remove(i);
+                break;
+            }
+        }
+    }
 }

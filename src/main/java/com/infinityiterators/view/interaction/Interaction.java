@@ -54,13 +54,6 @@ public class Interaction {
         return new String(password);
     }
 
-    public static void displaySystemMessage(String message) {
-        final String ANSI_PINK = "\u001B[95m";
-        final String ANSI_RESET = "\u001B[0m";
-
-        System.out.println(ANSI_PINK + message + ANSI_RESET);
-    }
-
     public static void displayMessage(String message, DisplayType type, boolean returnLine) {
         System.out.print(type.getCode() + message + DisplayType.NORMAL.getCode());
         if(returnLine) System.out.println();

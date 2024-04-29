@@ -18,4 +18,8 @@ public class ProductService {
     public ArrayList<ProductDto> getAllProduct(){
         return null;
     }
+
+    public void handleInvalidInput(){
+        System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+    }
 }

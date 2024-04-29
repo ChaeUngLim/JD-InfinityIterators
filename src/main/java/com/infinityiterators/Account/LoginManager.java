@@ -14,7 +14,7 @@ public class LoginManager {
         LoginInput lm = new LoginInput();
     }
 
-    // test용
+    // test용 삭제예정
     public static void main(String[] args) {
         accountList = new ArrayList<>() ;
         accountList.add(new UserDTO("id","pwd"));

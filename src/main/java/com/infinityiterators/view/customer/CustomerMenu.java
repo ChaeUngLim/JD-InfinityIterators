@@ -15,10 +15,10 @@ public class CustomerMenu implements IMenuStrategyByType {
 
         MenuManager.displayMenuHeader("고객 메뉴");
         MenuManager.displaySelectionMenu("상품 조회 및 주문", "주문 내역 조회", "회원 정보 수정(임시)", "로그아웃");
-        while(true) {
+        while (true) {
             int selection = Interaction.getInt("메뉴를 선택해주세요");
 
-            switch(selection) {
+            switch (selection) {
                 case 1:
                     // 주문 관리
                     Interaction.displayMessage("상품 조회 및 주문 메뉴로 이동합니다.", DisplayType.SYSTEM, true);

@@ -1,7 +1,6 @@
 package com.infinityiterators.view.customer.cart;
 
 import com.infinityiterators.view.ISubMenuEntryPoint;
-import com.infinityiterators.view.customer.cart.*;
 import com.infinityiterators.view.interaction.*;
 import com.infinityiterators.product.*;
 
@@ -14,7 +13,7 @@ public class AddCartMenu implements ISubMenuEntryPoint {
         Interaction.displayMessage("상품 목록", DisplayType.SYSTEM, true);
         Interaction.displayMessage("상품 ID\t상품 이름\t상품 가격\t상품 수량", DisplayType.SYSTEM, true);
         for (ProductDto dto : new ProductController().getAllProducts()) {
-            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getQuantity(), DisplayType.SYSTEM, true);
+            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getStock(), DisplayType.SYSTEM, true);
         }
 
         // TODO. 현재 메뉴에서 상품의 번호와 갯수를 입력받아 구매하기(주문하기) 기능 구현

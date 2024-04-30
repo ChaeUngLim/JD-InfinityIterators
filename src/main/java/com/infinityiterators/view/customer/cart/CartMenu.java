@@ -19,7 +19,7 @@ public class CartMenu implements ISubMenuEntryPoint {
 
 
         for (ProductDto dto : new ProductController().getAllProducts()) {
-            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getQuantity(), DisplayType.SYSTEM, true);
+            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getStock(), DisplayType.SYSTEM, true);
 
         }
         MenuManager.displaySelectionMenu("모두 구매하기", "장바구니 초기화", "뒤로 가기");

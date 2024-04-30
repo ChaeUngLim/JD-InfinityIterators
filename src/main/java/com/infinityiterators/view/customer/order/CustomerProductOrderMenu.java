@@ -14,9 +14,9 @@ public class CustomerProductOrderMenu implements ISubMenuEntryPoint {
         // 상품의 전체 정보 우선 출력 (Product의 getAllProducts() 메소드 이용)
         Interaction.displayMessage("상품 목록", DisplayType.SYSTEM, true);
         Interaction.displayMessage("상품 ID\t상품 이름\t상품 가격\t상품 수량", DisplayType.SYSTEM, true);
-        for (ProductDto dto : new ProductController().getAllProducts()) {
-            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getQuantity(), DisplayType.SYSTEM, true);
-        }
+//        for (ProductDto dto : new ProductController().getAllProducts()) {
+//            Interaction.displayMessage(dto.getId() + "\t" + dto.getName() + "\t" + dto.getPrice() + "\t" + dto.getQuantity(), DisplayType.SYSTEM, true);
+//        }
 
         MenuManager.displaySelectionMenu("장바구니 담기", "장바구니 조회", "뒤로 가기");
 

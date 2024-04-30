@@ -11,11 +11,12 @@ import com.infinityiterators.view.interaction.*;
 
 public class CustomerMenu implements IMenuStrategyByType {
     public void showMenu() {
-        Interaction.clearScreen();
-
-        MenuManager.displayMenuHeader("고객 메뉴");
-        MenuManager.displaySelectionMenu("상품 조회 및 주문", "주문 내역 조회", "회원 정보 수정(임시)", "로그아웃");
         while (true) {
+            Interaction.clearScreen();
+
+            MenuManager.displayMenuHeader("고객 메뉴");
+            MenuManager.displaySelectionMenu("상품 조회 및 주문", "주문 내역 조회", "회원 정보 수정(임시)", "로그아웃");
+
             int selection = Interaction.getInt("메뉴를 선택해주세요");
 
             switch (selection) {

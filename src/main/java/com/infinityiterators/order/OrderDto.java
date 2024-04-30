@@ -1,6 +1,8 @@
-package com.infinityiterators.view.admin.order.model.dto;
+package com.infinityiterators.order;
 
-public class orderDTO {
+import java.time.*;
+
+public class OrderDto {
     private Long orderId; // 주문번호 (PK)
     private String product; // 제품
     private int orderQuantity; // 주문수량
@@ -9,14 +11,14 @@ public class orderDTO {
     private boolean isShipped; // 주문출고여부
 
 
-    public orderDTO(Long orderId, String product, int orderQuantity, String customer, LocalDate orderDate, boolean isShipped) {
-        this.orderId = orderId;
-        this.product = product;
-        this.orderQuantity = orderQuantity;
-        this.customer = customer;
-        this.orderDate = orderDate;
-        this.isShipped = isShipped;
-    }
+//    public OrderDto(Long orderId, String product, int orderQuantity, String customer, LocalDate orderDate, boolean isShipped) {
+//        this.orderId = orderId;
+//        this.product = product;
+//        this.orderQuantity = orderQuantity;
+//        this.customer = customer;
+//        this.orderDate = orderDate;
+//        this.isShipped = isShipped;
+//    }
 
     public Long getOrderId() {
         return orderId;

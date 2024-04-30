@@ -1,14 +1,11 @@
 package com.infinityiterators.product;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ProductRepostiory {
 
-    private ArrayList<ProductDto> productDTOArrayList;
-
-    public ProductRepostiory(){
-        this.productDTOArrayList = new ArrayList<>();
-    }
+    private static ArrayList<ProductDto> productDTOArrayList = new ArrayList<>();
 
     public void addProduct(ProductDto dto){
         productDTOArrayList.add(dto);
@@ -23,13 +20,17 @@ public class ProductRepostiory {
         return null;
     }
 
+    public ArrayList<ProductDto> getAllProducts(){
+        return productDTOArrayList;
+    }
+
     public void updateProduct(int index, ProductDto dto){
         if (index >= 0 && index < productDTOArrayList.size()) {
             productDTOArrayList.set(index, dto);
         }
     }
 
-    public void removeProduct(String name){
+    public void removeProductByName(String name){
         for (int i = 0; i < productDTOArrayList.size(); i++){
             ProductDto product = productDTOArrayList.get(i);
             if (product.getName().equals(name)){
@@ -37,5 +38,9 @@ public class ProductRepostiory {
                 break;
             }
         }
+    }
+
+    public void removeProduct(ProductDto dto){
+        productDTOArrayList.remove(dto);
     }
 }

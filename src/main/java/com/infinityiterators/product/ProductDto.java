@@ -1,32 +1,19 @@
 package com.infinityiterators.product;
 
-import java.util.ArrayList;
-
 public class ProductDto {
-
-    ArrayList<ProductDto> productDTOArrayList;
-
+    private static int idCounter = 0;
     private int id;
     private String name;
     private double price;
-    private String size;
-    private int quantity;
+    private String size;    // size of the clothes
+    private int stock;
 
-    // 기본 생성자
-
-    public ProductDto() {
-    }
-
-
-    // 생성자
-
-
-    public ProductDto(int id, String name, double price, String size, int quantity) {
-        this.id = id;
+    public ProductDto(String name, double price, String size, int stock) {
+        this.id = idCounter++;
         this.name = name;
         this.price = price;
         this.size = size;
-        this.quantity = quantity;
+        this.stock = stock;
     }
 
 
@@ -62,12 +49,12 @@ public class ProductDto {
         this.size = size;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getStock() {
+        return stock;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
     @Override
@@ -77,7 +64,7 @@ public class ProductDto {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 ", size='" + size + '\'' +
-                ", quantity=" + quantity +
+                ", quantity=" + stock +
                 '}';
     }
 }

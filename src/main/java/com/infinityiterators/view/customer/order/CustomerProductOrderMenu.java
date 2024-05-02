@@ -1,11 +1,16 @@
 package com.infinityiterators.view.customer.order;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.product.*;
 import com.infinityiterators.view.ISubMenuEntryPoint;
 import com.infinityiterators.view.customer.cart.*;
 import com.infinityiterators.view.interaction.*;
 
 public class CustomerProductOrderMenu implements ISubMenuEntryPoint {
+    private Dependencies di;
+    public CustomerProductOrderMenu(Dependencies di) {
+        this.di = di;
+    }
     public void showEntryPointMenu() {
         Interaction.clearScreen();
 

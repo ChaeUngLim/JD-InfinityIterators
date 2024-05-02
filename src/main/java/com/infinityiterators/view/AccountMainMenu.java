@@ -1,5 +1,8 @@
 package com.infinityiterators.view;
 
+import com.infinityiterators.Account.AccountController;
+import com.infinityiterators.view.admin.AdminMenu;
+import com.infinityiterators.view.customer.CustomerMenu;
 import com.infinityiterators.view.interaction.*;
 
 import java.awt.*;
@@ -67,6 +70,13 @@ public class AccountMainMenu {
         String password = Interaction.getHiddenInput("비밀번호"); // 일반 콘솔에서만 동작(IDE에서는 동작하지 않음)
 
         // TODO. 로그인 인증 정보 요청(ACCOUNT)
+        try {
+            new AccountController().login(id, password);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
         // 로그인 성공 시 해당 Account 객체 반환
         // 로그인 실패 시 null 반환
         // CHECK: 로그인 실패의 경우 Exception 전달받아 직접 처리
@@ -76,6 +86,8 @@ public class AccountMainMenu {
 
         // if(userDto.isAdmin()) // 관리자 메뉴로 이동
         // else // 사용자 메뉴로 이동
+
+        new CustomerMenu().showMenu();
     }
 
     private void registerMenu() {

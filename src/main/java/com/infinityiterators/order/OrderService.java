@@ -13,7 +13,7 @@ public class OrderService {
     }
 
     public ArrayList<OrderDto> findSomeonesOrderList(UserDTO dto) {
-        return new OrderRepository()
+        return new OrderRepository().
     }
 
     public void addProductToCart(OrderDto order) {

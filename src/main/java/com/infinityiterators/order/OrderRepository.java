@@ -9,7 +9,7 @@ public class OrderRepository {
     private static ArrayList<OrderDto> orders = new ArrayList<>();
 
 
-    public ArrayList<OrderDto> getAllOrders() {
+    public ArrayList<OrderDto> tAllOrders() {
         return orders;
         // select * from ...
     }

@@ -1,5 +1,6 @@
 package com.infinityiterators.view.admin.product;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.product.*;
 import com.infinityiterators.view.*;
 import com.infinityiterators.view.interaction.*;
@@ -7,6 +8,11 @@ import com.infinityiterators.view.interaction.*;
 import java.util.ArrayList;
 
 public class AdminProductMenu implements ISubMenuEntryPoint {
+    private Dependencies di;
+    public AdminProductMenu(Dependencies di) {
+        this.di = di;
+    }
+
     @Override
     public void showEntryPointMenu() {
         while(true) {
@@ -44,7 +50,7 @@ public class AdminProductMenu implements ISubMenuEntryPoint {
         showProductList();
 
         int id = Interaction.getInt("삭제할 상품 ID를 입력해주세요");
-        ProductDto product = new ProductController().searchProductByName(""); // TODO. searchProductById 메소드로 수정
+        ProductDto product = di.productController().searchProductByName(""); // TODO. searchProductById 메소드로 수정
 //        ProductDto product = new ProductController().searchProductById(id);
 
         // 상품이 존재하지 않을 경우
@@ -53,7 +59,7 @@ public class AdminProductMenu implements ISubMenuEntryPoint {
             return;
         }
 
-        new ProductController().removeProduct(product);
+        di.productController().removeProduct(product);
         Interaction.displayMessage("상품이 삭제되었습니다.", DisplayType.SYSTEM, true);
     }
 
@@ -79,7 +85,7 @@ public class AdminProductMenu implements ISubMenuEntryPoint {
         Interaction.clearScreen();
         MenuManager.displayMenuHeader("상품 목록");
 
-        ArrayList<ProductDto> allProducts = new ProductController().getAllProducts();
+        ArrayList<ProductDto> allProducts = di.productController().getAllProducts();
         if(allProducts.size() == 0) {
             Interaction.displayMessage("등록된 상품이 없습니다.", DisplayType.ERROR, true);
             return;

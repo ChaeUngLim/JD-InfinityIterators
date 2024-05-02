@@ -1,5 +1,6 @@
 package com.infinityiterators.view.customer;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.*;
 
 
@@ -10,6 +11,11 @@ import com.infinityiterators.view.customer.product.CustomerProductMenu;
 import com.infinityiterators.view.interaction.*;
 
 public class CustomerMenu implements IMenuStrategyByType {
+    private Dependencies di;
+    public CustomerMenu(Dependencies di) {
+        this.di = di;
+    }
+
     public void showMenu() {
         while (true) {
             Interaction.clearScreen();

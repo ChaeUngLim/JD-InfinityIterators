@@ -1,9 +1,15 @@
 package com.infinityiterators.view.admin.account;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.*;
 import com.infinityiterators.view.interaction.*;
 
 public class AdminAccountMenu implements ISubMenuEntryPoint {
+    private Dependencies di;
+    public AdminAccountMenu(Dependencies di) {
+        this.di = di;
+    }
+
     @Override
     public void showEntryPointMenu() {
         Interaction.clearScreen();

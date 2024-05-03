@@ -20,7 +20,7 @@ public class LoginManager {
         accountList.add(new UserDTO("id1","pwd1"));
         accountList.add(new UserDTO("id2","pwd"));
 
-        LoginInput lm = new LoginInput()    ;
+        LoginInput lm = new LoginInput();
         lm.inputLoginData();
     }
 }

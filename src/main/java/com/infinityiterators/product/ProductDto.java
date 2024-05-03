@@ -4,11 +4,11 @@ public class ProductDto {
     private static int idCounter = 0;
     private int id;
     private String name;
-    private double price;
+    private int price;
     private String size;    // size of the clothes
     private int stock;
 
-    public ProductDto(String name, double price, String size, int stock) {
+    public ProductDto(String name, int price, String size, int stock) {
         this.id = idCounter++;
         this.name = name;
         this.price = price;
@@ -33,11 +33,11 @@ public class ProductDto {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

@@ -13,7 +13,7 @@ public class ProductController {
         addNewProduct("Pants", 30000, "XL", 30);
     }
 
-    public void addNewProduct(String productName, double price, String size, int stock){
+    public void addNewProduct(String productName, int price, String size, int stock){
         // 올바른 값인지 체크
         if(productName == null || productName.isEmpty() || price <= 0 || size == null || size.isEmpty() || stock <= 0){
             throw new IllegalArgumentException("잘못된 값이 입력되었습니다.");
@@ -33,6 +33,12 @@ public class ProductController {
     public ProductDto searchProductByName(String name) {
         ProductDto dto = new ProductService().searchProductByName(name);
         if(dto == null) throw new IllegalArgumentException("해당 상품이 존재하지 않습니다.");
+        return dto;
+    }
+
+    public ProductDto searchProductById(int id) {
+        ProductDto dto = new ProductController().searchProductById(id);
+        if (dto == null) throw new IllegalArgumentException("해당 상품이 존재하지 않습니다.");
         return dto;
     }
 

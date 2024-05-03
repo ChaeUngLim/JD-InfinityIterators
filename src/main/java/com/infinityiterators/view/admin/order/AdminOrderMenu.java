@@ -1,9 +1,15 @@
 package com.infinityiterators.view.admin.order;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.*;
 import com.infinityiterators.view.interaction.*;
 
 public class AdminOrderMenu implements ISubMenuEntryPoint {
+    private Dependencies di;
+    public AdminOrderMenu(Dependencies di) {
+        this.di = di;
+    }
+
     @Override
     public void showEntryPointMenu() {
         Interaction.clearScreen();

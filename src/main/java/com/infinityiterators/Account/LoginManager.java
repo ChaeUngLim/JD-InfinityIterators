@@ -10,7 +10,6 @@ import static com.infinityiterators.Account.SignupManager.accountList;
 public class LoginManager {
 
     public void logIn(){
-
         LoginInput lm = new LoginInput();
     }
 

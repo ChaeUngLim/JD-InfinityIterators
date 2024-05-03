@@ -50,8 +50,7 @@ public class AdminProductMenu implements ISubMenuEntryPoint {
         showProductList();
 
         int id = Interaction.getInt("삭제할 상품 ID를 입력해주세요");
-        ProductDto product = di.productController().searchProductByName(""); // TODO. searchProductById 메소드로 수정
-//        ProductDto product = new ProductController().searchProductById(id);
+        ProductDto product = di.productController().searchProductById(id);
 
         // 상품이 존재하지 않을 경우
         if(product == null) {
@@ -65,20 +64,13 @@ public class AdminProductMenu implements ISubMenuEntryPoint {
 
 
     private void addNewProduct() {
-//        Interaction.clearScreen();
-//        MenuManager.displayMenuHeader("새 상품 등록");
-//
-//        String name = Interaction.getString("상품명을 입력해주세요");
-////        double price = Interaction.getDouble("가격을 입력해주세요");
-//        String size = Interaction.getString("사이즈를 입력해주세요");
-//        int stock = Interaction.getInt("재고수량을 입력해주세요");
-//
-//        try {
-//            new ProductController().addNewProduct(name, price, size, stock);
-//            Interaction.displayMessage("상품이 등록되었습니다.", DisplayType.SYSTEM, true);
-//        } catch(IllegalArgumentException e) {
-//            Interaction.displayMessage(e.getMessage(), DisplayType.ERROR, true);
-//        }
+        // public void addNewProduct(String productName, int price, String size, int stock)
+        String productName = Interaction.getString("상품명을 입력해주세요");
+        int price = Interaction.getInt("가격을 입력해주세요");
+        String size = Interaction.getString("사이즈를 입력해주세요");
+        int stock = Interaction.getInt("재고수량을 입력해주세요");
+
+        di.productController().addNewProduct(productName, price, size, stock);
     }
 
     private void showProductList() {

@@ -1,11 +1,16 @@
 package com.infinityiterators.view.customer.account;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.ISubMenuEntryPoint;
 import com.infinityiterators.view.interaction.DisplayType;
 import com.infinityiterators.view.interaction.Interaction;
 import com.infinityiterators.view.interaction.MenuManager;
 
 public class CustomerAccountMenu implements ISubMenuEntryPoint {
+    private Dependencies di;
+    public CustomerAccountMenu(Dependencies di) {
+        this.di = di;
+    }
     @Override
     public void showEntryPointMenu() {
         Interaction.clearScreen();

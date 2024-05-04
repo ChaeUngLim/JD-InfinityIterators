@@ -2,6 +2,7 @@ package com.infinityiterators.Account;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class UserDTO {
@@ -17,14 +18,14 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String ID, String pwd, String name, LocalDate birthDate, boolean adminStatus, LocalDateTime registerDate) {
+    public UserDTO(String ID, String pwd, String name, LocalDate birthDate, boolean adminStatus) {
 //        this.PK = PK;
         this.ID = ID;
         this.pwd = pwd;
         this.name = name;
         this.birthDate = birthDate;
         this.adminStatus = adminStatus;
-        this.registerDate = registerDate;
+        this.registerDate = LocalDateTime.now();
     }
 
     public UserDTO(String ID, String pwd) {

@@ -30,4 +30,12 @@ public class AccountRepository {
         }
         return null;
     }
+
+    public UserDTO findUserById(String id) {
+        for(var user : accountList) {
+            if(user.getID().equals(id)) return user;
+        }
+
+        return null;
+    }
 }

@@ -12,9 +12,13 @@ public class ProductService {
     }
 
 
+
+
+
     public void addNewProduct(ProductDto dto){
         // ProductRepository에서 상품 추가
         new ProductRepostiory().addProduct(dto);
+
     }
 
     public ProductDto searchProductByName(String name){

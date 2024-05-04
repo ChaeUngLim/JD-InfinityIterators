@@ -1,62 +1,58 @@
 package com.infinityiterators.order;
 
+import com.infinityiterators.Account.UserDTO;
+import com.infinityiterators.product.ProductDto;
+
+import java.net.UnknownServiceException;
 import java.time.*;
 
 public class OrderDto {
-    private Long orderId; // 주문번호 (PK)
-    private String product; // 제품
-    private int orderQuantity; // 주문수량
-    private String customer; // 주문자
-    private LocalDate orderDate; // 주문일자
-    private boolean isShipped; // 주문출고여부
+    private static int idCount = 0;
+    private long orderId;
+    private ProductDto product;
+    private int quantity;
 
+    private UserDTO user;
+    private LocalDateTime orderDate;
+    private boolean isShipped = false;
 
-//    public OrderDto(Long orderId, String product, int orderQuantity, String customer, LocalDate orderDate, boolean isShipped) {
-//        this.orderId = orderId;
-//        this.product = product;
-//        this.orderQuantity = orderQuantity;
-//        this.customer = customer;
-//        this.orderDate = orderDate;
-//        this.isShipped = isShipped;
-//    }
-
-    public Long getOrderId() {
-        return orderId;
+    public OrderDto(ProductDto product, int quantity, UserDTO user) {
+        this.orderId = idCount++;
+        this.product = product;
+        this.quantity = quantity;
+        this.user = user;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+
+    public int getQuantity() {
+        return quantity;
     }
 
-    public String getProduct() {
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public ProductDto getProduct() {
         return product;
     }
 
-    public void setProduct(String product) {
+    public void setProduct(ProductDto product) {
         this.product = product;
     }
 
-    public int getOrderQuantity() {
-        return orderQuantity;
+    public UserDTO getUser() {
+        return user;
     }
 
-    public void setOrderQuantity(int orderQuantity) {
-        this.orderQuantity = orderQuantity;
+    public void setUser(UserDTO user) {
+        this.user = user;
     }
 
-    public String getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(String customer) {
-        this.customer = customer;
-    }
-
-    public LocalDate getOrderDate() {
+    public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(LocalDate orderDate) {
+    public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -68,5 +64,6 @@ public class OrderDto {
         isShipped = shipped;
     }
 }
+
 
 

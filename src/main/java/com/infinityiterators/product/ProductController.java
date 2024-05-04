@@ -2,10 +2,13 @@ package com.infinityiterators.product;
 
 import java.util.ArrayList;
 
-public class ProductController {
-    public ProductController() {    // Constructor
-        addSampleProduct();
-    }
+
+public class         ProductController {
+
+    private ArrayList<String> products;
+    public ProductController(){
+        this.products = new ArrayList<>();
+
 
     private void addSampleProduct() {
         addNewProduct("T-shirt", 10000, "M", 10);

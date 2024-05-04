@@ -1,5 +1,6 @@
 package com.infinityiterators.view.admin;
 
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.*;
 
 import com.infinityiterators.view.admin.account.*;
@@ -9,6 +10,11 @@ import com.infinityiterators.view.admin.product.*;
 import com.infinityiterators.view.interaction.*;
 
 public class AdminMenu implements IMenuStrategyByType {
+    private Dependencies di;
+    public AdminMenu(Dependencies di) {
+        this.di = di;
+    }
+
     public void showMenu() {
         Interaction.clearScreen();
 
@@ -21,17 +27,17 @@ public class AdminMenu implements IMenuStrategyByType {
                 case 1:
                     // 회원 관리
                     Interaction.displayMessage("회원 관리 메뉴로 이동합니다.", DisplayType.SYSTEM, true);
-                    new AdminAccountMenu().showEntryPointMenu();
+                    new AdminAccountMenu(di).showEntryPointMenu();
                     break;
                 case 2:
                     // 상품 관리
                     Interaction.displayMessage("상품 관리 메뉴로 이동합니다.", DisplayType.SYSTEM, true);
-                    new AdminProductMenu().showEntryPointMenu();
+                    new AdminProductMenu(di).showEntryPointMenu();
                     break;
                 case 3:
                     // 주문 관리
                     Interaction.displayMessage("주문 관리 메뉴로 이동합니다.", DisplayType.SYSTEM, true);
-                    new AdminOrderMenu().showEntryPointMenu();
+                    new AdminOrderMenu(di).showEntryPointMenu();
                     break;
                 case 4:
                     Interaction.displayMessage("로그아웃합니다.", DisplayType.SYSTEM, true);

@@ -1,6 +1,7 @@
 package com.infinityiterators.view;
 
 import com.infinityiterators.Account.AccountController;
+import com.infinityiterators.deps.Dependencies;
 import com.infinityiterators.view.admin.AdminMenu;
 import com.infinityiterators.view.customer.CustomerMenu;
 import com.infinityiterators.view.interaction.*;
@@ -10,8 +11,9 @@ import java.time.LocalDateTime;
 
 public class AccountMainMenu {
     private MenuContext menuContext;
+    private Dependencies di;
 
-    public AccountMainMenu() {
+    public AccountMainMenu(Dependencies di) {
         menuContext = new MenuContext();
     }
 
@@ -71,7 +73,7 @@ public class AccountMainMenu {
 
         // TODO. 로그인 인증 정보 요청(ACCOUNT)
         try {
-            new AccountController().login(id, password);
+            di.accountController().login(id, password);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -87,7 +89,8 @@ public class AccountMainMenu {
         // if(userDto.isAdmin()) // 관리자 메뉴로 이동
         // else // 사용자 메뉴로 이동
 
-        new CustomerMenu().showMenu();
+        new CustomerMenu(di).showMenu();
+        // new AdminMenu(di).showMenu();
     }
 
     private void registerMenu() {
